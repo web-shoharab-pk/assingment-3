@@ -1,20 +1,16 @@
-//https://github.com/web-shoharab-pk/assingment-3
 
+// https://github.com/web-shoharab-pk/assingment-3
 
 //kilometer to meter programming start.
 
 function kilometerToMeter(inputKilometer) {
+    var meter = 0;
     var meter = inputKilometer * 1000; // 1000 meter is equal 1 kilometer
     if (inputKilometer < 0) {
         console.log("Distance cannot be negative");
     }
-    else {
-        console.log(inputKilometer + " Kilometer is equal : " + meter + " Meter");
-    }
     return meter;
 }
-kilometerToMeter(10);
-kilometerToMeter(-1);
 
 //complete kilometer to meter programming end.
 
@@ -22,20 +18,16 @@ kilometerToMeter(-1);
 //budget calculator programming start
 
 function budgetCalculator(clock, mobile, laptop) {
+    var totalCost = 0;
     var clockCost = clock * 50;
     var mobileCost = mobile * 100;
     var laptopCost = laptop * 500;
-    var total = clockCost + mobileCost + laptopCost;
+    totalCost = clockCost + mobileCost + laptopCost;
     if (clock < 0 || mobile < 0 || laptop < 0) {
         console.log("Product cannot be negative");
     }
-    else {
-        console.log("total cost of this budget : " + total, "Total value of clock : " + clockCost, "Total value of mobile : " + mobileCost, "Total value of laptop : " + laptopCost);
-    }
-    return clockCost, mobileCost, laptopCost, total;
+    return totalCost;
 }
-budgetCalculator(100, 10, 5);
-budgetCalculator(100, 100, -15);
 
 //budget calculator programming end
 
@@ -43,35 +35,44 @@ budgetCalculator(100, 100, -15);
 //hotel cost programming start
 
 function hotelCost(livingDay) {
+    var totalRent = 0;
     if (livingDay >= 0 && livingDay <= 10) {
         var firstRent = livingDay * 100;
-        var totalRent = firstRent;
-        console.log("your total bill is : " + totalRent);
+        totalRent = firstRent;
     }
     else if (livingDay > 10 && livingDay <= 20) {
         var livingDay = livingDay - 10;
         var firstRent = 100 * 10;
         var secondRent = livingDay * 80;
-        var totalRent = firstRent + secondRent;
-        console.log("your total bill is : " + totalRent);
+        totalRent = firstRent + secondRent;
     }
     else if (livingDay > 20) {
         var livingDay = livingDay - 20;
         var firstRent = 100 * 10;
         var secondRent = 80 * 10;
         var lastRent = livingDay * 50;
-        var totalRent = firstRent + secondRent + lastRent;
-        console.log("your total bill is : " + totalRent);
+        totalRent = firstRent + secondRent + lastRent;
     }
     else {
         console.log("living day cannot be nagetive");
     }
     return totalRent;
 }
-hotelCost(100);
-hotelCost(-20);
 
 //hotel cost programming end
 
 
 //mega friend programming start
+
+var friendsNameList = ["Alamin", "Nirob", "Roky", "Rabby", "Shoharab Pk", "Shohan", "Shohel"];
+function megaFriend(friensListArray) {
+    let largeName = "";
+    for (let i = 0; i < friensListArray.length; i++) {
+        if (largeName.length < friensListArray[i].length) {
+            largeName = friensListArray[i];
+        }
+    }
+    return largeName;
+}
+
+//mega friend programming end
