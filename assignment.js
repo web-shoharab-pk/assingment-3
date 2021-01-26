@@ -7,7 +7,7 @@ function kilometerToMeter(inputKilometer) {
     var meter = 0;
     var meter = inputKilometer * 1000; // 1000 meter is equal 1 kilometer
     if (inputKilometer < 0) {
-        console.log("Distance cannot be negative");
+        return 'Distance cannot be negative';
     }
     return meter;
 }
@@ -24,7 +24,7 @@ function budgetCalculator(clock, mobile, laptop) {
     var laptopCost = laptop * 500;
     totalCost = clockCost + mobileCost + laptopCost;
     if (clock < 0 || mobile < 0 || laptop < 0) {
-        console.log("Product cannot be negative");
+        return "Product cannot be negative";
     }
     return totalCost;
 }
@@ -54,11 +54,12 @@ function hotelCost(livingDay) {
         totalRent = firstRent + secondRent + lastRent;
     }
     else {
-        console.log("living day cannot be nagetive");
+        return "living day cannot be nagetive";
     }
     return totalRent;
 }
-
+var result = hotelCost(-10, 0, 0);
+console.log(result);
 //hotel cost programming end
 
 
